@@ -78,7 +78,7 @@ function Login() {
     <Link to="/signup" style={{textAlign:"left"}}>Register</Link>
   </Col>
   <Col>
-    <Link to="/home" style={{float:"right"}}>Home</Link>
+    <Link to="/" style={{float:"right"}}>Home</Link>
   </Col>
 </Row>
 <br/>

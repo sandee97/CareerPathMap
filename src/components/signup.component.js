@@ -70,7 +70,7 @@ function SignUp() {
             <Link to="/login" style={{textAlign:"left"}}>Login</Link>
           </Col>
           <Col>
-            <Link to="/home" style={{float:"right"}}>Home</Link>
+            <Link to="/" style={{float:"right"}}>Home</Link>
           </Col>
         </Row>
         <br/>

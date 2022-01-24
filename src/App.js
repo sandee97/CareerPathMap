@@ -10,12 +10,18 @@ import ForgotPassword from './components/passwordUpdate.component';
 import { useAuth } from './auth/context';
 import Formcomponent from './components/form.component';
 import {Navigate} from 'react-router-dom'
+import Home from './components/home.component';
 function App() {
   const { currentUser } = useAuth()
   return (
     <div className="App">
         <Routes>
-        <Route exact path="/" element={<><h1>hehe</h1></>} />
+        <Route exact path="/" element={<>
+          {currentUser ? (<NavLogin/>)
+              :
+              (<NavLogout/>)
+            }
+        <Home/></>} />
         <Route exact path="/passwordReset" element={<>
           {currentUser ? (<NavLogin/>)
               :
