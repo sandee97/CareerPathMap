@@ -85,6 +85,15 @@ html { font-size: calc(0.65em + 0.2vw); }
     font-weight: bold;
     margin-bottom: 20px;
   }
+  .auth-inner-home {
+    width: 70%;
+    margin: auto;
+    background: #F5F5F5;
+    padding: 25px 55px 25px 55px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  
+  }
 } 
 @media screen and (max-width: 600px) {
   .auth-inner-form{
@@ -96,6 +105,15 @@ html { font-size: calc(0.65em + 0.2vw); }
     font-weight: bold;
     margin-bottom: 20px;
   }
+  .auth-inner-home {
+    width: 80%;
+    margin: auto;
+    background: #F5F5F5;
+    padding: 25px 55px 25px 55px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  
+  }
 } 
 @media screen and (max-width : 500px) {
   .auth-inner {
@@ -106,15 +124,13 @@ html { font-size: calc(0.65em + 0.2vw); }
     margin-top: 50px;
     overflow-y: auto;
   }
-}
-@media screen and (max-width: 500px) {
-  .auth-inner-form{
+  .auth-inner-home {
     width: 95%;
     margin: auto;
     background: #F5F5F5;
     padding: 25px 55px 25px 55px;
     margin-top: 50px;
-    font-weight: bold;
     margin-bottom: 20px;
+  
   }
-} 
+}

@@ -3,7 +3,8 @@ import { Table, Form, FormControl, Button} from 'react-bootstrap'
 import {userdata,userheaders} from './data.js'
 import MyVerticallyCenteredModal from './formview.component.js';
 import {CSVDownload} from 'react-csv';
-
+import {auth} from '../firebase.js'
+import axios from 'axios'
 function Datausers() {
     const [modalShow, setModalShow] = useState(false);
     const [modalData, setModalData] = useState(false);
@@ -19,6 +20,23 @@ function Datausers() {
         setModalShow(true);
         setModalData(userdata[index]['formdetails'])
     }
+    useEffect(()=>{
+        var config = { headers: {  
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*'}
+        }
+        auth.currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+        axios.post("http://127.0.0.1:5000/login", { token : idToken }, config )
+         .then(function (response) {
+           console.log(response);
+         })
+         .catch(function (error) {
+           console.log(error);
+         });
+
+          }).catch(function(error) {
+          });
+    },[])
     useEffect(() => {
         setSearchInput(searchValue)
         if (searchValue !== '') {
